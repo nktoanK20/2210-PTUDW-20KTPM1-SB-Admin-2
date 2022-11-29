@@ -1,231 +1,395 @@
-<title>Zay Shop eCommerce HTML CSS Template</title>
+<title>SB Admin 2 - Dashboard</title>
 
-<!-- Modal -->
-<div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="w-100 pt-1 mb-5 text-right">
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <form action="" method="get" class="modal-content modal-body border-0 p-0">
-      <div class="input-group mb-2">
-        <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ..." />
-        <button type="submit" class="input-group-text bg-success text-light">
-          <i class="fa fa-fw fa-search text-white"></i>
-        </button>
-      </div>
-    </form>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        class="fas fa-download fa-sm text-white-50"></i>
+      Generate Report</a>
   </div>
-</div>
 
-<!-- Start Banner Hero -->
-<div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
-    <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
-    <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="container">
-        <div class="row p-5">
-          <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-            <img class="img-fluid" src="/img/banner_img_01.jpg" alt="" />
-          </div>
-          <div class="col-lg-6 mb-0 d-flex align-items-center">
-            <div class="text-align-left align-self-center">
-              <h1 class="h1 text-success"><b>Zay</b> eCommerce</h1>
-              <h3 class="h2">Tiny and Perfect eCommerce Template</h3>
-              <p>
-                Zay Shop is an eCommerce HTML5 CSS template with latest version
-                of Bootstrap 5 (beta 1). This template is 100% free provided by
-                <a rel="sponsored" class="text-success" href="https://templatemo.com" target="_blank">TemplateMo</a>
-                website. Image credits go to
-                <a rel="sponsored" class="text-success" href="https://stories.freepik.com/" target="_blank">Freepik
-                  Stories</a>,
-                <a rel="sponsored" class="text-success" href="https://unsplash.com/" target="_blank">Unsplash</a>
-                and
-                <a rel="sponsored" class="text-success" href="https://icons8.com/" target="_blank">Icons 8</a>.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row p-5">
-          <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-            <img class="img-fluid" src="/img/banner_img_02.jpg" alt="" />
-          </div>
-          <div class="col-lg-6 mb-0 d-flex align-items-center">
-            <div class="text-align-left">
-              <h1 class="h1">Proident occaecat</h1>
-              <h3 class="h2">Aliquip ex ea commodo consequat</h3>
-              <p>
-                You are permitted to use this Zay CSS template for your
-                commercial websites. You are
-                <strong>not permitted</strong>
-                to re-distribute the template ZIP file in any kind of template
-                collection websites.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row p-5">
-          <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-            <img class="img-fluid" src="/img/banner_img_03.jpg" alt="" />
-          </div>
-          <div class="col-lg-6 mb-0 d-flex align-items-center">
-            <div class="text-align-left">
-              <h1 class="h1">Repr in voluptate</h1>
-              <h3 class="h2">Ullamco laboris nisi ut</h3>
-              <p>
-                We bring you 100% free CSS templates for your websites. If you
-                wish to support TemplateMo, please make a small contribution via
-                PayPal or tell your friends about our website. Thank you.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button"
-    data-bs-slide="prev">
-    <i class="fas fa-chevron-left"></i>
-  </a>
-  <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button"
-    data-bs-slide="next">
-    <i class="fas fa-chevron-right"></i>
-  </a>
-</div>
-<!-- End Banner Hero -->
-
-<!-- Start Categories of The Month -->
-<section class="container py-5">
-  <div class="row text-center pt-3">
-    <div class="col-lg-6 m-auto">
-      <h1 class="h1">Categories of The Month</h1>
-      <p>
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-        officia deserunt mollit anim id est laborum.
-      </p>
-    </div>
-  </div>
+  <!-- Content Row -->
   <div class="row">
-    <div class="col-12 col-md-4 p-5 mt-3">
-      <a href="#"><img src="/img/category_img_01.jpg" class="rounded-circle img-fluid border" /></a>
-      <h5 class="text-center mt-3 mb-3">Watches</h5>
-      <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                Earnings (Monthly)
+              </div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">
+                $40,000
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-md-4 p-5 mt-3">
-      <a href="#"><img src="/img/category_img_02.jpg" class="rounded-circle img-fluid border" /></a>
-      <h2 class="h5 text-center mt-3 mb-3">Shoes</h2>
-      <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
-    </div>
-    <div class="col-12 col-md-4 p-5 mt-3">
-      <a href="#"><img src="/img/category_img_03.jpg" class="rounded-circle img-fluid border" /></a>
-      <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-      <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
-    </div>
-  </div>
-</section>
-<!-- End Categories of The Month -->
 
-<!-- Start Featured Product -->
-<section class="bg-light">
-  <div class="container py-5">
-    <div class="row text-center py-3">
-      <div class="col-lg-6 m-auto">
-        <h1 class="h1">Featured Product</h1>
-        <p>
-          Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident.
-        </p>
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-success shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                Earnings (Annual)
+              </div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">
+                $215,000
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12 col-md-4 mb-4">
-        <div class="card h-100">
-          <a href="/shop/single">
-            <img src="/img/feature_prod_01.jpg" class="card-img-top" alt="..." />
-          </a>
-          <div class="card-body">
-            <ul class="list-unstyled d-flex justify-content-between">
-              <li>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-muted fa fa-star"></i>
-                <i class="text-muted fa fa-star"></i>
-              </li>
-              <li class="text-muted text-right">$240.00</li>
-            </ul>
-            <a href="/shop/single" class="h2 text-decoration-none text-dark">Gym Weight</a>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in
-              culpa qui officia deserunt.
-            </p>
-            <p class="text-muted">Reviews (24)</p>
+
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-info shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                Tasks
+              </div>
+              <div class="row no-gutters align-items-center">
+                <div class="col-auto">
+                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                    50%
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress progress-sm mr-2">
+                    <div class="progress-bar bg-info" role="progressbar" style="
+																	width: 50%;
+																" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 mb-4">
-        <div class="card h-100">
-          <a href="/shop/single">
-            <img src="/img/feature_prod_02.jpg" class="card-img-top" alt="..." />
-          </a>
-          <div class="card-body">
-            <ul class="list-unstyled d-flex justify-content-between">
-              <li>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-muted fa fa-star"></i>
-                <i class="text-muted fa fa-star"></i>
-              </li>
-              <li class="text-muted text-right">$480.00</li>
-            </ul>
-            <a href="/shop/single" class="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
-            <p class="card-text">
-              Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae
-              pharetra sed, commodo ullamcorper.
-            </p>
-            <p class="text-muted">Reviews (48)</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 mb-4">
-        <div class="card h-100">
-          <a href="/shop/single">
-            <img src="/img/feature_prod_03.jpg" class="card-img-top" alt="..." />
-          </a>
-          <div class="card-body">
-            <ul class="list-unstyled d-flex justify-content-between">
-              <li>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-              </li>
-              <li class="text-muted text-right">$360.00</li>
-            </ul>
-            <a href="/shop/single" class="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
-            <p class="card-text">
-              Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar
-              sagittis diam, et scelerisque ipsum lobortis nec.
-            </p>
-            <p class="text-muted">Reviews (74)</p>
+    </div>
+
+    <!-- Pending Requests Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-warning shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                Pending Requests
+              </div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">
+                18
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-comments fa-2x text-gray-300"></i>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- End Featured Product -->
+
+  <!-- Content Row -->
+
+  <div class="row">
+    <!-- Area Chart -->
+    <div class="col-xl-8 col-lg-7">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">
+            Earnings Overview
+          </h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+              <div class="dropdown-header">
+                Dropdown Header:
+              </div>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas id="myAreaChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="col-xl-4 col-lg-5">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">
+            Revenue Sources
+          </h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+              <div class="dropdown-header">
+                Dropdown Header:
+              </div>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <div class="chart-pie pt-4 pb-2">
+            <canvas id="myPieChart"></canvas>
+          </div>
+          <div class="mt-4 text-center small">
+            <span class="mr-2">
+              <i class="fas fa-circle text-primary"></i>
+              Direct
+            </span>
+            <span class="mr-2">
+              <i class="fas fa-circle text-success"></i>
+              Social
+            </span>
+            <span class="mr-2">
+              <i class="fas fa-circle text-info"></i>
+              Referral
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Row -->
+  <div class="row">
+    <!-- Content Column -->
+    <div class="col-lg-6 mb-4">
+      <!-- Project Card Example -->
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">
+            Projects
+          </h6>
+        </div>
+        <div class="card-body">
+          <h4 class="small font-weight-bold">
+            Server Migration
+            <span class="float-right">20%</span>
+          </h4>
+          <div class="progress mb-4">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <h4 class="small font-weight-bold">
+            Sales Tracking
+            <span class="float-right">40%</span>
+          </h4>
+          <div class="progress mb-4">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <h4 class="small font-weight-bold">
+            Customer Database
+            <span class="float-right">60%</span>
+          </h4>
+          <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+              aria-valuemax="100"></div>
+          </div>
+          <h4 class="small font-weight-bold">
+            Payout Details
+            <span class="float-right">80%</span>
+          </h4>
+          <div class="progress mb-4">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+              aria-valuemax="100"></div>
+          </div>
+          <h4 class="small font-weight-bold">
+            Account Setup
+            <span class="float-right">Complete!</span>
+          </h4>
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color System -->
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="card bg-primary text-white shadow">
+            <div class="card-body">
+              Primary
+              <div class="text-white-50 small">
+                #4e73df
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card bg-success text-white shadow">
+            <div class="card-body">
+              Success
+              <div class="text-white-50 small">
+                #1cc88a
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card bg-info text-white shadow">
+            <div class="card-body">
+              Info
+              <div class="text-white-50 small">
+                #36b9cc
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card bg-warning text-white shadow">
+            <div class="card-body">
+              Warning
+              <div class="text-white-50 small">
+                #f6c23e
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card bg-danger text-white shadow">
+            <div class="card-body">
+              Danger
+              <div class="text-white-50 small">
+                #e74a3b
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card bg-secondary text-white shadow">
+            <div class="card-body">
+              Secondary
+              <div class="text-white-50 small">
+                #858796
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card bg-light text-black shadow">
+            <div class="card-body">
+              Light
+              <div class="text-black-50 small">
+                #f8f9fc
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card bg-dark text-white shadow">
+            <div class="card-body">
+              Dark
+              <div class="text-white-50 small">
+                #5a5c69
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 mb-4">
+      <!-- Illustrations -->
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">
+            Illustrations
+          </h6>
+        </div>
+        <div class="card-body">
+          <div class="text-center">
+            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem" src="img/undraw_posting_photo.svg"
+              alt="..." />
+          </div>
+          <p>
+            Add some quality, svg illustrations
+            to your project courtesy of
+            <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection
+            of beautiful svg images that you can
+            use completely free and without
+            attribution!
+          </p>
+          <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw
+            &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Approach -->
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">
+            Development Approach
+          </h6>
+        </div>
+        <div class="card-body">
+          <p>
+            SB Admin 2 makes extensive use of
+            Bootstrap 4 utility classes in order
+            to reduce CSS bloat and poor page
+            performance. Custom CSS classes are
+            used to create custom components and
+            custom utility classes.
+          </p>
+          <p class="mb-0">
+            Before working with this theme, you
+            should become familiar with the
+            Bootstrap framework, especially the
+            utility classes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.container-fluid -->
+
+<!-- Page level plugins -->
+<script src="vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="js/demo/chart-area-demo.js"></script>
+<script src="js/demo/chart-pie-demo.js"></script>
