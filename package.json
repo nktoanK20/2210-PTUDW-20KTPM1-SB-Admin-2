@@ -1,0 +1,25 @@
+{
+  "name": "sb-admin-2",
+  "version": "1.0.0",
+  "description": "HCMUS 20KTPM01 web application development project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nktoanK20/2210-PTUDW-20KTPM1-SB-Admin-2.git"
+  },
+  "keywords": [
+    "HCMUS",
+    "WebApplicationDev",
+    "PTUDW",
+    "KTPM"
+  ],
+  "author": "Nguyen Khanh Toan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nktoanK20/2210-PTUDW-20KTPM1-SB-Admin-2/issues"
+  },
+  "homepage": "https://github.com/nktoanK20/2210-PTUDW-20KTPM1-SB-Admin-2#readme"
+}
