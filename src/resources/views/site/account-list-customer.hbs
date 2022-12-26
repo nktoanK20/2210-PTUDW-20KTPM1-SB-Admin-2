@@ -1,0 +1,96 @@
+<title>SB Admin 2 - Tables</title>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Account List</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Customer's Account</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="customerAccount" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                First Name
+                                {{{sortable_account 'customer' 'firstName' _sort currentPage}}}
+                            </th>
+                            <th>Last Name
+                                {{{sortable_account 'customer' 'lastName' _sort currentPages}}}
+                            </th>
+                            <th>Email
+                                {{{sortable_account 'customer' 'email' _sort currentPage}}}
+                            </th>
+                            <th>Created At
+                                {{{sortable_account 'customer' 'createdAt' _sort currentPage}}}
+                            </th>
+                            <th>Status
+                                {{{sortable_account 'customer' 'enabled' _sort currentPage}}}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each customers}}
+                        <tr>
+                            <td>{{this.firstName}}</td>
+                            <td>{{this.lastName}}</td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.createdAt}}</td>
+                            {{#if this.enabled}}
+                            <td>Normal</td>
+                            {{else}}
+                            <td class="text-danger">Banned</td>
+                            {{/if}}
+
+                            {{#if this.enabled}}
+                            <td>
+                                <form
+                                    action="/account-ban?_method=PUT&ban&sortBy={{../_sort.sortBy}}&sortType={{../_sort.sortType}}&page={{../currentPage}}"
+                                    method="POST">
+                                    <button type="submit" class="btn btn-link" name="customerId"
+                                        value={{this._id}}>Ban</button>
+                                </form>
+                            </td>
+                            {{else}}
+                            <td>
+                                <form
+                                    action="/account-ban?_method=PUT&unban&sortBy={{../_sort.sortBy}}&sortType={{../_sort.sortType}}&page={{../currentPage}}"
+                                    method="POST">
+                                    <button type="submit" class="btn btn-link" name="customerId"
+                                        value={{this._id}}>Unban</button>
+                                </form>
+                            </td>
+                            {{/if}}
+
+                            <td>
+                                <form action="/account-detail" method="POST">
+                                    <button type="submit" class="btn btn-link" name="customerId"
+                                        value={{this._id}}>Details</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="">
+            <ul class="pagination pagination-lg justify-content-center">
+                {{{paginate_account "customer" _sort totalPages currentPage}}}
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+<!-- Page level plugins -->
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="js/demo/datatables-demo.js"></script>

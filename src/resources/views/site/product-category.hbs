@@ -1,0 +1,60 @@
+<title>Category</title>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Product Categories</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Product Categories</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="category" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                Name
+
+                            </th>
+                            <th>Description</th>
+
+                            <th>Created At
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each categories}}
+                        <tr>
+                            <td>{{this.name}}</td>
+                            <td>{{this.description}}</td>
+                            <td>{{this.createdAt}}</td>
+                            <td>
+                                <form action="/product-category-edit" method="GET">
+                                    <button type="submit" class="btn btn-link" name="categoryId"
+                                        value={{this._id}}>Edit</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5 text-center">
+        <a href="/product-category-create" class="btn btn-primary profile-button">Add New Category</a>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+<!-- Page level plugins -->
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="js/demo/datatables-demo.js"></script>

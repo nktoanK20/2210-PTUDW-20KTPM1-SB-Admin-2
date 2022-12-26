@@ -1,0 +1,80 @@
+<title>SB Admin 2 - Tables</title>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Product List</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="adminAccount" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                Name
+                                {{{sortable_product 'name' _sort currentPage}}}
+                            </th>
+                            <th>Category
+                                {{{sortable_product 'category' _sort currentPage}}}
+                            </th>
+                            <th>Brand
+                                {{{sortable_product 'brand' _sort currentPage}}}
+                            </th>
+                            <th>Price
+                                {{{sortable_product 'price' _sort currentPage}}}
+                            </th>
+                            <th>Total Purchase
+                                {{{sortable_product 'totalPurchase' _sort currentPage}}}
+                            </th>
+                            <th>Created At
+                                {{{sortable_product 'createdAt' _sort currentPage}}}
+                            </th>
+                            <th>Status
+                                {{{sortable_product 'status' _sort currentPage}}}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each products}}
+                        <tr>
+                            <td>{{this.name}}</td>
+                            <td>{{this.category}}</td>
+                            <td>{{this.brand}}</td>
+                            <td>{{this.price}}</td>
+                            <td>{{this.totalPurchase}}</td>
+                            <td>{{this.createdAt}}</td>
+                            <td>{{this.status}}</td>
+                            <td>
+                                <form action="/product-edit" method="GET">
+                                    <button type="submit" class="btn btn-link" name="productId"
+                                        value="{{this._id}}">Edit
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="">
+            <ul class="pagination pagination-lg justify-content-center">
+                {{{paginate_product _sort totalPages currentPage}}}
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+<!-- Page level plugins -->
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="js/demo/datatables-demo.js"></script>
