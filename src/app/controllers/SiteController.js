@@ -2,6 +2,7 @@ const CustomerService = require('../models/CustomerService');
 const AdminService = require('../models/AdminService');
 const CategoryService = require('../models/CategoryService');
 const ProductService = require('../models/ProductService');
+const OrderService = require('../models/OrderService');
 
 class SiteController {
 	// [GET] /account-list-customer
@@ -163,6 +164,56 @@ class SiteController {
 		await ProductService.save(req.body);
 
 		res.redirect('/product-create?message=Create Product Successfully!');
+	}
+
+	// [GET] /order-list
+	async order_list(req, res, next) {
+		let status = req.query.status;
+		if (!status) {
+			status = 'preparing';
+		}
+
+		let orders = await OrderService.get('status', status);
+		for (let i = 0; i < orders.length; i++) {
+			orders[i]['customer'] = await CustomerService.getOne(
+				orders[i].customerId,
+				null,
+			);
+		}
+
+		res.render('site/order-list', {
+			orders,
+			message: req.query.message,
+			status,
+		});
+	}
+
+	//[GET] /order-edit/:id
+	async order_edit(req, res, next) {
+		let order = await OrderService.getOne('_id', req.params.id);
+		order['customer'] = await CustomerService.getOne(
+			order.customerId,
+			null,
+		);
+
+		res.render('site/order-edit', {
+			order,
+			totalItems: Object.keys(order.items).length,
+		});
+	}
+
+	//[PUT] /order-edit/:id
+	async order_update(req, res, next) {
+		let status = req.body.status;
+		console.log(status);
+		await OrderService.updateOne(req.params.id, { status: status });
+
+		res.redirect('/order-list?message=Order Updated!');
+	}
+
+	//[GET] /report
+	async report_show(req, res, next) {
+		res.render('site/test1');
 	}
 
 	// [GET] /index (home page)

@@ -1,0 +1,78 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-12 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Orders List</h4>
+                    {{#if message}}
+                    <h4 class="text-success">{{message}}</h4>
+                    {{/if}}
+                    {{#if errorMessages}}
+                    {{#each errorMessages}}
+                    <h4 class="text-danger">{{this}}</h4>
+                    {{/each}}
+                    {{/if}}
+                    <form class="row" action="/order-list" method="GET">
+                        <span class="mt-1 mr-2">Order Status: <br></span>
+                        <div>
+                            <select name="status" class="py-1 status-selection" required="true">
+                                <option value="preparing">Preparing</option>
+                                <option value="delivering">Delivering</option>
+                                <option value="delivered">Delivered</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">
+                                Update
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped" width="100%" cellspacing="0">
+                        {{#if orders}}
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Created At</th>
+                                <th scope="col">Customer's Email</th>
+                                <th scope="col">Payment Method</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each orders}}
+                            <tr>
+                                <td>{{this._id}}</td>
+                                <td>{{this.createdAt}}</td>
+                                <td>{{this.customer.email}}</td>
+                                <td>{{this.paymentMethod}}</td>
+                                <td>{{this.totalPrice}}₫</td>
+                                <td>{{this.status}}</td>
+                                <td><a href="/order-edit/{{this._id}}" class="btn btn-link">Edit</a></td>
+                            </tr>
+
+                            {{/each}}
+                        </tbody>
+                        {{else}}
+                        <h2>There is no order in the database.</h2>
+                        {{/if}}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div hidden="true" id="order-status" status={{status}}></div>
+
+<script>
+    var statusSelection;
+    var orderStatus;
+    document.addEventListener('DOMContentLoaded', function () {
+        statusSelection = $('select.status-selection');
+        orderStatus = document.getElementById('order-status');
+
+        statusSelection.val(orderStatus.getAttribute("status")).change();
+    });
+</script>

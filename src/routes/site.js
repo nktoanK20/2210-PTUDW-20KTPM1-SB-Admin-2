@@ -20,6 +20,12 @@ router.put('/product-edit', siteController.product_update);
 router.get('/product-create', siteController.product_create);
 router.post('/product-create', siteController.product_save);
 
+router.get('/order-list', siteController.order_list);
+router.get('/order-edit/:id', siteController.order_edit);
+router.put('/order-edit/:id', siteController.order_update);
+
+router.get('/report', siteController.report_show);
+
 router.get('/', siteController.account_list_customer);
 
 module.exports = router;
