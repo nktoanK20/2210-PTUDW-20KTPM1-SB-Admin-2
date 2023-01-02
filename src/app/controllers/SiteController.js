@@ -213,7 +213,7 @@ class SiteController {
 
 	//[GET] /report
 	async report_show(req, res, next) {
-		res.render('site/test1');
+		res.render('site/reports');
 	}
 
 	// [GET] /index (home page)
